@@ -1,0 +1,25 @@
+.other {
+    padding: 0px;
+    border: 1px solid black;
+    height: 400px;
+    width: 30%;
+    text-align: center;
+    background-color: aqua;
+}
+
+.other>.item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    height: 80%;
+    width: 80%;
+    border: 1px solid black;
+    margin-left: 30px;
+}
+
+.item>.card {
+    height: 40px;
+    width: 100%;
+    border: 1px solid;
+}

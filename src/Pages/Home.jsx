@@ -1,0 +1,30 @@
+import Header from "../Header/Header.jsx";
+import Navigation from "../Header/Navigation.jsx";
+import Pagination from "./Pagination.jsx";
+import Announcement from "./Announcement.jsx";
+import OtherLinks from "./OtherLinks.jsx";
+import ServicesCard from "../Online Services/ServicesCard.jsx";
+import Footer from "../Footer/Footer.jsx"
+import "../css/Home.css";
+
+function Home() {
+    return (
+        <>
+
+
+            <Pagination />
+
+            <div className="Side">
+
+                <Announcement />
+                <OtherLinks />
+            </div>
+
+            <ServicesCard />
+
+
+        </>
+    );
+}
+
+export default Home;

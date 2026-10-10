@@ -1,0 +1,53 @@
+.hero {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    color: white;
+    background:
+        linear-gradient(90deg,
+            rgba(8, 35, 75, 0.95),
+            rgba(8, 35, 75, 0.5)),
+        url("/Images/Pagination/1.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-content h1 {
+    font-size: clamp(32px, 5vw, 55px);
+    margin: 12px 0;
+}
+
+.hero-content h2 {
+    font-size: 22px;
+}
+
+.hero-content p {
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.hero-buttons button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #ffcc33;
+    color: #123b70;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 25px;
+        min-height: 350px;
+    }
+}
