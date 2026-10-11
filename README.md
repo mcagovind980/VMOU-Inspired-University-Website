@@ -1,16 +1,114 @@
-# React + Vite
+# VMOU University Information Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About the Project
 
-Currently, two official plugins are available:
+This project is a responsive university information website inspired by the public-facing website of Vardhman Mahaveer Open University (VMOU).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+I built this project to practise React development and create a simple way for students to explore university information, admission announcements, educational resources and student services.
 
-## React Compiler
+The focus was on creating a clean layout, reusable components, responsive design and working navigation.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Responsive header and navigation menu
+- Dropdown menus for university sections
+- Search functionality for website pages and announcements
+- Admission announcements and notices
+- Online services and quick links
+- E-Books and study material section
+- Departments and academic programmes
+- Regional centre information
+- Student support and contact section
+- Automatically sliding service cards
+- Responsive footer
+- Reusable React components
+- Client-side data rendering using JavaScript arrays
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- React.js
+- JavaScript
+- HTML5
+- CSS3
+- React Router DOM
+- Vite
+
+## Project Structure
+
+The project uses reusable components and separate CSS files to keep the code organised.
+
+- `src/` contains the main React application.
+- `src/components/` contains reusable components.
+- `src/css/` contains CSS files for different sections.
+- `src/Data/` contains JavaScript data arrays for notices, navigation and other website content.
+- `public/` contains static assets such as images and other public files.
+
+*The exact folder names may vary according to the current project structure.*
+
+## How to Run the Project
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/mcagovind980/Ebook-web-site.git
+```
+
+### 2. Open the project folder
+
+```bash
+cd Ebook-web-site
+```
+
+### 3. Install dependencies
+
+Navigate to the folder containing `package.json` and run:
+
+```bash
+npm install
+```
+
+### 4. Start the development server
+
+For a Vite project, run:
+
+```bash
+npm run dev
+```
+
+Open the local URL shown in the terminal to view the website.
+
+## What I Learned
+
+While building this project, I practised creating reusable React components, managing page navigation with React Router, rendering content from JavaScript arrays and building responsive layouts with CSS.
+
+I also worked on client-side search, dropdown menus, sliding service cards and fixing layout and navigation issues.
+
+## Project Type
+
+**Frontend-only project**
+
+This project uses local JavaScript arrays for its content. It does not require a backend server or database. The search functionality works with the data available in the frontend.
+
+## Live Demo
+
+https://vmou-inspired-university-website.netlify.app
+
+## Source Code
+
+https://github.com/mcagovind980/VMOU-Inspired-University-Website.git
+
+## Future Improvements
+
+- Improve search across more website content
+- Add category filters for notices and services
+- Improve keyboard accessibility
+- Further refine the mobile layout
+- Add clearer empty states when searches return no results
+
+## Author
+
+**Govind Kumar**
+
+GitHub: https://github.com/mcagovind980
+
+LinkedIn: https://www.linkedin.com/in/govind-kumarMern/
