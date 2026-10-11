@@ -123,7 +123,6 @@ I also worked on dropdown menus, sliding service cards and fixing layout and nav
 Currently, the website uses local JavaScript arrays and does not require a backend or database.
 
 In the future, an API could be connected to fetch notices and service information. Loading, empty-data and error states would help handle different API responses.
-<<<<<<< HEAD
 ## Screenshots
 
 ### Desktop View
@@ -150,20 +149,20 @@ Responsive design is implemented using CSS media queries and flexible layouts wh
 ## Screenshots
 
 ### Mobile View
-![Mobile Responsive View](screenshots/mobile.jpg)
+![Mobile Responsive View](screenshots/mobile.png)
 
 ### Tablet View
-![Tablet Responsive View](screenshots/tablet.jpg)
+![Tablet Responsive View](screenshots/tablet.png)
 
 ### Desktop View
-![Desktop Responsive View](screenshots/desktop.jpg)
+![Desktop Responsive View](screenshots/desktop.png)
 
 ### Services and Footer
-![Services and Footer](screenshots/services.jpg)
+![Services and Footer](screenshots/services.png)
 
 
 =======
->>>>>>> d7d6db25ba6bd886dc18dc510b1af4d945d88af1
+
 
 ## Live Demo
 
@@ -173,7 +172,6 @@ https://vmou-inspired-university-website.netlify.app
 
 https://github.com/mcagovind980/VMOU-Inspired-University-Website
 
-<<<<<<< HEAD
 
 
 ## Author
@@ -182,7 +180,6 @@ https://github.com/mcagovind980/VMOU-Inspired-University-Website
 =======
 ## Author
 
->>>>>>> d7d6db25ba6bd886dc18dc510b1af4d945d88af1
 **Govind Kumar**
 
 - GitHub: https://github.com/mcagovind980
