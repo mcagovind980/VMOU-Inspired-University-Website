@@ -23,7 +23,7 @@ function Education() {
     }
 
     return (
-        <div className="education">
+        <div className="education1">
             <h2>Education Programmes</h2>
 
             <select

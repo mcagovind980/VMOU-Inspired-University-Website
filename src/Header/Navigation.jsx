@@ -2,116 +2,280 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navigation.css";
 import Announcement from "../Data/Announcement.js";
-import pages from "../Data/Navigation.js"
+import pages from "../Data/Navigation.js";
+
 function Navigation() {
     const [search, setSearch] = useState("");
+    const [openMenu, setOpenMenu] = useState("");
     const navigate = useNavigate();
-
 
     const allItems = [
         ...pages,
         ...Announcement.map((item) => ({
             title: item.title,
-            path: item.Link
-        }))
+            path: item.Link,
+        })),
     ];
 
     const results = search.trim()
-        ? allItems.filter((item) =>
-            item.title?.toLowerCase().includes(search.trim().toLowerCase())
-        ).filter((item, index, arr) =>
-            arr.findIndex((x) => x.title === item.title && x.path === item.path) === index
-        ).slice(0, 10)
+        ? allItems
+              .filter((item) =>
+                  item.title
+                      ?.toLowerCase()
+                      .includes(search.trim().toLowerCase())
+              )
+              .filter(
+                  (item, index, arr) =>
+                      arr.findIndex(
+                          (x) =>
+                              x.title === item.title &&
+                              x.path === item.path
+                      ) === index
+              )
+              .slice(0, 10)
         : [];
+
+    function toggleMenu(name) {
+        setOpenMenu((current) => (current === name ? "" : name));
+    }
+
+    function handleMenuClick(event, name) {
+        // Desktop: follow the link normally.
+        // Tablet/mobile: first tap opens the dropdown.
+        if (window.matchMedia("(max-width: 992px)").matches) {
+            event.preventDefault();
+            toggleMenu(name);
+        }
+    }
+
+    function closeMenu() {
+        setOpenMenu("");
+    }
 
     function openResult(path) {
         if (path) {
             navigate(path);
             setSearch("");
+            closeMenu();
         }
     }
 
     return (
         <div className="container1">
-            <div className="navigation">
-                <Link to="/">HOME</Link>
+            <nav className="navigation" aria-label="Main navigation">
+                <Link to="/" onClick={closeMenu}>
+                    HOME
+                </Link>
 
-                <div className="dropdown">
-                    <Link to="/AboutUniversity">UNIVERSITY</Link>
+                {/* UNIVERSITY */}
+                <div
+                    className={`dropdown ${
+                        openMenu === "university" ? "open" : ""
+                    }`}
+                >
+                    <Link
+                        to="/AboutUniversity"
+                        aria-expanded={openMenu === "university"}
+                        onClick={(e) =>
+                            handleMenuClick(e, "university")
+                        }
+                    >
+                        UNIVERSITY
+                    </Link>
+
                     <div className="menu">
-                        <Link to="/AboutUniversity">About University</Link>
-                        <Link to="/Departments">Departments</Link>
-                        <Link to="/Governance">Governance</Link>
+                        <Link to="/AboutUniversity" onClick={closeMenu}>
+                            About University
+                        </Link>
+                        <Link to="/Departments" onClick={closeMenu}>
+                            Departments
+                        </Link>
+                        <Link to="/Governance" onClick={closeMenu}>
+                            Governance
+                        </Link>
                     </div>
                 </div>
 
-                <div className="dropdown">
-                    <Link to="/AdmissionCorner">STUDENT E-CORNER</Link>
+                {/* STUDENT E-CORNER */}
+                <div
+                    className={`dropdown ${
+                        openMenu === "student" ? "open" : ""
+                    }`}
+                >
+                    <Link
+                        to="/AdmissionCorner"
+                        aria-expanded={openMenu === "student"}
+                        onClick={(e) => handleMenuClick(e, "student")}
+                    >
+                        STUDENT E-CORNER
+                    </Link>
+
                     <div className="menu">
-                        <Link to="/AdmissionAnnouncement">Admission Announcement</Link>
-                        <Link to="/ServicesCard">ServicesCard</Link>
-                        <Link to="/OneView">OneView</Link>
-                        <Link to="/AdmissionCorner">Admission Corner</Link>
-                        <Link to="/BooksSlm">Books SLM</Link>
-                        <Link to="/VideoLectures">Video Lectures</Link>
+                        <Link to="/AdmissionAnnouncement" onClick={closeMenu}>
+                            Admission Announcement
+                        </Link>
+                        <Link to="/ServicesCard" onClick={closeMenu}>
+                            Services Card
+                        </Link>
+                        <Link to="/OneView" onClick={closeMenu}>
+                            OneView
+                        </Link>
+                        <Link to="/AdmissionCorner" onClick={closeMenu}>
+                            Admission Corner
+                        </Link>
+                        <Link to="/BooksSlm" onClick={closeMenu}>
+                            Books SLM
+                        </Link>
+                        <Link to="/VideoLectures" onClick={closeMenu}>
+                            Video Lectures
+                        </Link>
                     </div>
                 </div>
 
-                <div className="dropdown">
-                    <Link to="/SchoolOfCommerce">SCHOOL</Link>
+                {/* SCHOOL */}
+                <div
+                    className={`dropdown ${
+                        openMenu === "school" ? "open" : ""
+                    }`}
+                >
+                    <Link
+                        to="/SchoolOfCommerce"
+                        aria-expanded={openMenu === "school"}
+                        onClick={(e) => handleMenuClick(e, "school")}
+                    >
+                        SCHOOL
+                    </Link>
+
                     <div className="menu">
-                        <Link to="/SchoolOfCommerce">School of Commerce</Link>
-                        <Link to="/SchoolOfEducation">School of Education</Link>
-                        <Link to="/SchoolOfScience">School of Science</Link>
+                        <Link to="/SchoolOfCommerce" onClick={closeMenu}>
+                            School of Commerce
+                        </Link>
+                        <Link to="/SchoolOfEducation" onClick={closeMenu}>
+                            School of Education
+                        </Link>
+                        <Link to="/SchoolOfScience" onClick={closeMenu}>
+                            School of Science
+                        </Link>
                     </div>
                 </div>
 
-                <div className="dropdown">
-                    <Link to="/Ajmer">REGIONAL CENTERS</Link>
+                {/* REGIONAL CENTERS */}
+                <div
+                    className={`dropdown ${
+                        openMenu === "regional" ? "open" : ""
+                    }`}
+                >
+                    <Link
+                        to="/Ajmer"
+                        aria-expanded={openMenu === "regional"}
+                        onClick={(e) => handleMenuClick(e, "regional")}
+                    >
+                        REGIONAL CENTERS
+                    </Link>
+
                     <div className="menu">
-                        <Link to="/Ajmer">Ajmer</Link>
-                        <Link to="/Bikaner">Bikaner</Link>
-                        <Link to="/Kota">Kota</Link>
-                        <Link to="/Udaipur">Udaipur</Link>
+                        <Link to="/Ajmer" onClick={closeMenu}>Ajmer</Link>
+                        <Link to="/Bikaner" onClick={closeMenu}>Bikaner</Link>
+                        <Link to="/Kota" onClick={closeMenu}>Kota</Link>
+                        <Link to="/Udaipur" onClick={closeMenu}>Udaipur</Link>
                     </div>
                 </div>
 
-                <div className="dropdown">
-                    <Link to="/EducationProgramme">PROGRAMMES</Link>
+                {/* PROGRAMMES */}
+                <div
+                    className={`dropdown ${
+                        openMenu === "programmes" ? "open" : ""
+                    }`}
+                >
+                    <Link
+                        to="/EducationProgramme"
+                        aria-expanded={openMenu === "programmes"}
+                        onClick={(e) => handleMenuClick(e, "programmes")}
+                    >
+                        PROGRAMMES
+                    </Link>
+
                     <div className="menu">
-                        <Link to="/EducationProgramme">Education Programme</Link>
-                        <Link to="/BachelerDegree">Bachelor Degree</Link>
-                        <Link to="/Deploma">Diploma</Link>
-                        <Link to="/MasterDegree">Master Degree</Link>
+                        <Link to="/EducationProgramme" onClick={closeMenu}>
+                            Education Programme
+                        </Link>
+                        <Link to="/BachelerDegree" onClick={closeMenu}>
+                            Bachelor Degree
+                        </Link>
+                        <Link to="/Deploma" onClick={closeMenu}>
+                            Diploma
+                        </Link>
+                        <Link to="/MasterDegree" onClick={closeMenu}>
+                            Master Degree
+                        </Link>
                     </div>
                 </div>
 
-                <div className="dropdown">
-                    <Link to="/Admission">NOTICES</Link>
+                {/* NOTICES */}
+                <div
+                    className={`dropdown ${
+                        openMenu === "notices" ? "open" : ""
+                    }`}
+                >
+                    <Link
+                        to="/Admission"
+                        aria-expanded={openMenu === "notices"}
+                        onClick={(e) => handleMenuClick(e, "notices")}
+                    >
+                        NOTICES
+                    </Link>
+
                     <div className="menu">
-                        <Link to="/Admission">Admission</Link>
-                        <Link to="/Exam">Exam</Link>
-                        <Link to="/Result">Result</Link>
+                        <Link to="/Admission" onClick={closeMenu}>
+                            Admission
+                        </Link>
+                        <Link to="/Exam" onClick={closeMenu}>Exam</Link>
+                        <Link to="/Result" onClick={closeMenu}>Result</Link>
                     </div>
                 </div>
 
-                <div className="dropdown">
-                    <Link to="/HelpDesk">CONTACT</Link>
+                {/* CONTACT */}
+                <div
+                    className={`dropdown ${
+                        openMenu === "contact" ? "open" : ""
+                    }`}
+                >
+                    <Link
+                        to="/HelpDesk"
+                        aria-expanded={openMenu === "contact"}
+                        onClick={(e) => handleMenuClick(e, "contact")}
+                    >
+                        CONTACT
+                    </Link>
+
                     <div className="menu">
-                        <Link to="/Departments">Department</Link>
-                        <Link to="/HelpDesk">Help Desk</Link>
+                        <Link to="/Departments" onClick={closeMenu}>
+                            Department
+                        </Link>
+                        <Link to="/HelpDesk" onClick={closeMenu}>
+                            Help Desk
+                        </Link>
                     </div>
                 </div>
 
+                {/* FAQS */}
                 <div className="dropdown">
-                    <Link to="/Faqs">FAQS</Link>
+                    <Link to="/Faqs" onClick={closeMenu}>
+                        FAQS
+                    </Link>
                 </div>
 
+                {/* SEARCH */}
                 <div className="nav-search">
-                    <form onSubmit={(e) => {
-                        e.preventDefault();
-                        if (results.length > 0) openResult(results[0].path);
-                    }}>
+                    <form
+                        onSubmit={(e) => {
+                            e.preventDefault();
+
+                            if (results.length > 0) {
+                                openResult(results[0].path);
+                            }
+                        }}
+                    >
                         <input
                             type="search"
                             placeholder="Search website..."
@@ -119,6 +283,7 @@ function Navigation() {
                             onChange={(e) => setSearch(e.target.value)}
                             aria-label="Search website"
                         />
+
                         {search && (
                             <button
                                 type="button"
@@ -129,6 +294,7 @@ function Navigation() {
                                 ×
                             </button>
                         )}
+
                         <button type="submit" className="search-button">
                             Search
                         </button>
@@ -143,7 +309,7 @@ function Navigation() {
                                         key={`${item.path}-${item.title}-${index}`}
                                         onClick={() => openResult(item.path)}
                                     >
-                                         {item.title}
+                                        {item.title}
                                     </button>
                                 ))
                             ) : (
@@ -152,7 +318,7 @@ function Navigation() {
                         </div>
                     )}
                 </div>
-            </div>
+            </nav>
         </div>
     );
 }

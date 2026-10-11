@@ -1,3 +1,4 @@
+import "../css/Online.css"
 function Online() {
     return (
         <>

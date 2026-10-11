@@ -24,7 +24,17 @@ Link:"https://samadhaan.ugc.ac.in/"
    title:"UGC",
 Link:"https://www.ugc.gov.in/"
 },
-
+    {
+    id:6,
+   title:"MY Bharat Portal",
+Link:"https://mybharat.gov.in/"
+},
+    {
+    id:7,
+   title:"NATIONAL DIGITAL LIBRARY",
+Link:"https://ndl.iitkgp.ac.in/"
+},
+  
 
 ]
 export default Other
