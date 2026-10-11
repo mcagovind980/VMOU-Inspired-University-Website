@@ -50,13 +50,13 @@ The project uses reusable components and separate CSS files to keep the code org
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/mcagovind980/Ebook-web-site.git
+gh repo clone mcagovind980/VMOU-Inspired-University-Website
 ```
 
 ### 2. Open the project folder
 
 ```bash
-cd Ebook-web-site
+cd VMOU-Inspired-University-Website
 ```
 
 ### 3. Install dependencies
