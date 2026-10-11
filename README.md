@@ -1,28 +1,32 @@
-# VMOU University Information Website
+# VMOU-Inspired University Website
 
 ## About the Project
 
-This project is a responsive university information website inspired by the public-facing website of Vardhman Mahaveer Open University (VMOU).
+This is a responsive university information website developed using React.js as part of a frontend development skills assessment.
 
-I built this project to practise React development and create a simple way for students to explore university information, admission announcements, educational resources and student services.
+The project is inspired by the public-facing structure of Vardhman Mahaveer Open University (VMOU). It provides a simple way for students to explore university information, admission announcements, academic programmes, study materials and student services.
 
-The focus was on creating a clean layout, reusable components, responsive design and working navigation.
+My main focus was on building reusable React components, responsive layouts, working navigation and client-side search while maintaining a clean academic design.
+
+**Note:** This is an independent demo project, not an official VMOU website.
 
 ## Features
 
 - Responsive header and navigation menu
 - Dropdown menus for university sections
-- Search functionality for website pages and announcements
+- Client-side search for navigation pages and announcements
 - Admission announcements and notices
-- Online services and quick links
+- Online services and student quick links
 - E-Books and study material section
 - Departments and academic programmes
 - Regional centre information
 - Student support and contact section
 - Automatically sliding service cards
 - Responsive footer
-- Reusable React components
-- Client-side data rendering using JavaScript arrays
+- Data-driven content using JavaScript arrays
+- Page navigation using React Router DOM
+- Reusable components and separate CSS files
+- No backend or database required
 
 ## Technologies Used
 
@@ -35,22 +39,30 @@ The focus was on creating a clean layout, reusable components, responsive design
 
 ## Project Structure
 
-The project uses reusable components and separate CSS files to keep the code organised.
+```text
+VMOU-Inspired-University-Website/
+├── public/
+│   └── Images/
+├── src/
+│   ├── Data/
+│   │   ├── Announcement.js
+│   │   └── Navigation.js
+│   ├── Pages/
+│   ├── css/
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+└── README.md
+```
 
-- `src/` contains the main React application.
-- `src/components/` contains reusable components.
-- `src/css/` contains CSS files for different sections.
-- `src/Data/` contains JavaScript data arrays for notices, navigation and other website content.
-- `public/` contains static assets such as images and other public files.
+The project is organised into reusable components, JavaScript data files and separate CSS files for easier maintenance.
 
-*The exact folder names may vary according to the current project structure.*
-
-## How to Run the Project
+## Getting Started
 
 ### 1. Clone the repository
 
 ```bash
-gh repo clone mcagovind980/VMOU-Inspired-University-Website
+git clone https://github.com/mcagovind980/VMOU-Inspired-University-Website.git
 ```
 
 ### 2. Open the project folder
@@ -61,33 +73,56 @@ cd VMOU-Inspired-University-Website
 
 ### 3. Install dependencies
 
-Navigate to the folder containing `package.json` and run:
-
 ```bash
 npm install
 ```
 
-### 4. Start the development server
-
-For a Vite project, run:
+### 4. Run the project
 
 ```bash
 npm run dev
 ```
 
-Open the local URL shown in the terminal to view the website.
+Open the local URL displayed in your terminal to view the website.
+
+### 5. Build for production
+
+```bash
+npm run build
+```
+
+## Assessment Requirements
+
+The project follows the main requirements of the frontend assessment:
+
+- Responsive design for mobile, tablet and desktop screens.
+- Reusable components and data-driven rendering.
+- Search functionality for available website content.
+- Functional navigation and relevant page links.
+- Organised project structure and component-specific CSS.
+- Clear academic layout, readable colours and consistent styling.
+- Empty search results message when no matches are found.
 
 ## What I Learned
 
-While building this project, I practised creating reusable React components, managing page navigation with React Router, rendering content from JavaScript arrays and building responsive layouts with CSS.
+While developing this project, I practised React component development, React Router navigation, JavaScript array methods, client-side search and responsive CSS.
 
-I also worked on client-side search, dropdown menus, sliding service cards and fixing layout and navigation issues.
+I also worked on dropdown menus, sliding service cards and fixing layout and navigation issues.
 
-## Project Type
+## Future Improvements
 
-**Frontend-only project**
+- Add category filters for announcements and services.
+- Improve search to cover more website content.
+- Add a reusable `NoticeCard` component if not already implemented.
+- Improve keyboard navigation and accessibility.
+- Add loading, empty and error states for future API integration.
+- Further improve mobile responsiveness and user experience.
 
-This project uses local JavaScript arrays for its content. It does not require a backend server or database. The search functionality works with the data available in the frontend.
+## Future API Integration
+
+Currently, the website uses local JavaScript arrays and does not require a backend or database.
+
+In the future, an API could be connected to fetch notices and service information. Loading, empty-data and error states would help handle different API responses.
 
 ## Live Demo
 
@@ -95,20 +130,11 @@ https://vmou-inspired-university-website.netlify.app
 
 ## Source Code
 
-https://github.com/mcagovind980/VMOU-Inspired-University-Website.git
-
-## Future Improvements
-
-- Improve search across more website content
-- Add category filters for notices and services
-- Improve keyboard accessibility
-- Further refine the mobile layout
-- Add clearer empty states when searches return no results
+https://github.com/mcagovind980/VMOU-Inspired-University-Website
 
 ## Author
 
 **Govind Kumar**
 
-GitHub: https://github.com/mcagovind980
-
-LinkedIn: https://www.linkedin.com/in/govind-kumarMern/
+- GitHub: https://github.com/mcagovind980
+- LinkedIn: https://www.linkedin.com/in/govindkumarmern/
