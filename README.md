@@ -147,16 +147,7 @@ The website is designed to support different screen sizes:
 
 Responsive design is implemented using CSS media queries and flexible layouts where applicable. The goal is to keep navigation, announcements, service cards and footer content usable across devices.
 
-## Screenshots Gallery
-
-Add your screenshots to a folder named `screenshots` in the project root:
-
-- `screenshots/mobile.jpg`
-- `screenshots/tablet.jpg`
-- `screenshots/desktop.jpg`
-- `screenshots/services.jpg`
-
-Then add the following Markdown to display them:
+## Screenshots
 
 ### Mobile View
 ![Mobile Responsive View](screenshots/mobile.jpg)
@@ -167,7 +158,7 @@ Then add the following Markdown to display them:
 ### Desktop View
 ![Desktop Responsive View](screenshots/desktop.jpg)
 
-### Online Services and Footer
+### Services and Footer
 ![Services and Footer](screenshots/services.jpg)
 
 
