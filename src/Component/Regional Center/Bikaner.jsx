@@ -6,9 +6,9 @@ function Bikaner() {
             <div className="Ajmer">
                 <div className="content">
 
-                    <img src="/Images/Ajmer/Ajmer.jpg" />
+                    <img src="/Images/Ajmer/rcbkr.jpg" />
                      </div>
-                    <h1><a hreef="#">List of Study Centers</a></h1>
+                    <h1><a href="https://online.vmou.ac.in/StudyCentres.aspx?encparam=9WC7HQznN0Eo0N9SUbh9LA==">List of Study Centers</a></h1>
                     <p><b>Director :</b>
                         Mr. Balwan Singh Saini (Officiating Incharge)</p>
 

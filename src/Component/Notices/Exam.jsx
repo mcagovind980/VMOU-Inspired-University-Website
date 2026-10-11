@@ -4,7 +4,7 @@ function Department() {
     return (
         <>
             <div className="School">
-                <h1>~ SCHOOL OF COMMERCE & MANAGEMENT ~</h1>
+                <h1>~ Exam | Important Notices ~</h1>
                 <div className="table">
                     <table>
                         <thead>
@@ -22,6 +22,8 @@ function Department() {
                         <tbody>
                             {Exam.map((data) =>
                                 <tr key={data.EmployeeCode}>
+                                    <td>{data.EmployeeCode}</td>
+
                                     <td><a href={data.Link}>{data.ExamImportant}</a></td>
                                     <td>{data.RC}</td>
 

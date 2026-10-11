@@ -4,7 +4,7 @@ function Department() {
     return (
         <>
             <div className="School">
-                <h1>~ SCHOOL OF COMMERCE & MANAGEMENT ~</h1>
+                <h1>~ Bachelor Degree Programme ~</h1>
                 <div className="table">
                     <table>
                         <thead>

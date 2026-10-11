@@ -10,6 +10,7 @@ import AboutUniversity from "../src/Component/University/AboutUniversity.jsx";
 import AdmissionAnnouncement from "../src/Component/Student E-corner/AdmissionAnnouncement.jsx";
 import SchoolOfEducation from "../src/Component/School/SchoolOfEducation.jsx";
 import SchoolOfCommerce from "../src/Component/School/SchoolOfCommerce.jsx";
+import SchoolOfScience from "../src/Component/School/SchoolOfScience.jsx";
 import Ajmer from "./Component/Regional Center/Ajmer.jsx";
 import Bikaner from "./Component/Regional Center/Bikaner.jsx";
 import Kota from "./Component/Regional Center/Kota.jsx";
@@ -27,6 +28,16 @@ import HelpDesk from "../src/Component/Contact/HelpDesk.jsx";
 
 import Footer from "./Footer/Footer.jsx"
 import OneView from "./Online Services/OneView.jsx"
+
+import BooksSlm from "./Component/Student E-corner/BooksSlm.jsx"
+import AdmissionCorner from "./Footer/AdmissionCorner.jsx"
+import Result from "./Component/Student E-corner/Result.jsx";
+
+import VideoLectures from "./Online Services/VideoLectures.jsx";
+import ServicesCard from "./Online Services/ServicesCard.jsx";
+import Online from "./Online Services/Online.jsx";
+import Servicecardslid from "./Online Services/Servicecardslid.jsx";
+
 
 function Vmou() {
 
@@ -53,6 +64,7 @@ function Vmou() {
 
             <Route path="/SchoolOfEducation" element={<SchoolOfEducation />} />
             <Route path="/SchoolOfCommerce" element={<SchoolOfCommerce />} />
+            <Route path="/SchoolOfScience" element={<SchoolOfScience />} />
 
 
             <Route path="/Ajmer" element={<Ajmer />} />
@@ -72,12 +84,24 @@ function Vmou() {
             
             <Route path="/OneView" element={<OneView />} />
 
+            <Route path="/BooksSlm" element={<BooksSlm/>} />
+            <Route path="/AdmissionCorner" element={<AdmissionCorner/>} />
+            <Route path="/AdmissionCorner" element={<AdmissionCorner/>} />
+
+            <Route path="/Result" element={<Result/>} />
+
+            <Route path="/VideoLectures" element={<VideoLectures/>} />
+
+            <Route path="/ServicesCard" element={<ServicesCard/>} />
+            <Route path="/Online" element={<Online/>} />
+            {/* <Route path="/Servicecardslid" element={<Servicecardslid/>} /> */}
+
 
 
           </Routes>
         </main>
 
-
+<Servicecardslid/>
         <Footer />
       </div>
 

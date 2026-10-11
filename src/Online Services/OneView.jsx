@@ -1,7 +1,9 @@
+import "../css/OneView.css"
+
 function OneView() {
     return (
         <>
-            <div className="container">
+            <div className="oneview-page">
                 <div className="One">
                     <h3>ONE VIEW</h3>
                 </div>
@@ -33,7 +35,7 @@ function OneView() {
                         </label>
                         <label>
                             <input type="button" value="Submit" />
-                            <button type="button" >Reset</button>                            </label>
+                            <button type="button" >Reset</button>  </label>
                         <p>Search Scholar No. By Name</p>
                         <p>Your IP:</p>
                     </form>

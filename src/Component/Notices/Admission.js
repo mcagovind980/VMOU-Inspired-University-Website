@@ -3,13 +3,13 @@ const Fdata=[
         id:1,
     
         tital:"Admission Announcements",
-        Link:""
+        Link:"/AdmissionAnnouncement"
     },
     {
         id:2,
     
-        tital:"Admission Announcements",
-        Link:""
+        tital:"Admission Apply",
+        Link:"Online"
     },
     {
         id:3,
@@ -21,7 +21,7 @@ const Fdata=[
         id:4,
     
         tital:"Programmes",
-        Link:"#"
+        Link:"/EducationProgramme"
     }
     
 ]

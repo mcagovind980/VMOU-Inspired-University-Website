@@ -1,0 +1,78 @@
+.School {
+    width: 100%;
+    padding: 25px 15px;
+    box-sizing: border-box;
+    background: #f4f7fc;
+}
+
+.School h1 {
+    text-align: center;
+    color: #243f85;
+    font-size: 24px;
+    margin: 10px 0 25px;
+}
+
+.School .table {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow-x: auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.School .table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.School .table th {
+    background: #243f85;
+    color: #fff;
+    padding: 14px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.School .table td {
+    padding: 13px 14px;
+    border-bottom: 1px solid #e1e7f0;
+    color: #374151;
+}
+
+.School .table tbody tr:nth-child(even) {
+    background: #f2f6fc;
+}
+
+.School .table tbody tr:hover {
+    background: #e4edff;
+}
+
+.School .table a {
+    color: #2454b5;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.School .table a:hover {
+    color: #e67e22;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    .School {
+        padding: 15px 8px;
+    }
+
+    .School h1 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .School .table th,
+    .School .table td {
+        padding: 10px 8px;
+        font-size: 12px;
+    }
+}

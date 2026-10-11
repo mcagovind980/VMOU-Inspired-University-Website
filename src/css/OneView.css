@@ -1,0 +1,110 @@
+.oneview-page {
+    width: 100%;
+    padding: 25px 15px;
+    box-sizing: border-box;
+    background: #f3f6fc;
+}
+
+.oneview-page .One {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    background: #243f85;
+    border-radius: 10px 10px 0 0;
+}
+
+.oneview-page .One h3 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.oneview-page .view,
+.oneview-page .form {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 22px;
+    box-sizing: border-box;
+    background: white;
+    border: 1px solid #dce5f5;
+}
+
+.oneview-page .view {
+    line-height: 1.9;
+}
+
+.oneview-page .view li {
+    margin-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+
+.oneview-page .form {
+    border-top: 3px solid #3156a3;
+    border-radius: 0 0 10px 10px;
+}
+
+.oneview-page .form form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.oneview-page .form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.oneview-page .form input[type="text"],
+.oneview-page .form input[type="date"],
+.oneview-page .form select {
+    width: 100%;
+    max-width: 100%;
+    min-height: 42px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+}
+
+.oneview-page .form input[type="button"],
+.oneview-page .form button {
+    padding: 11px 20px;
+    margin-right: 8px;
+    border: none;
+    border-radius: 6px;
+    background: #243f85;
+    color: white;
+    cursor: pointer;
+}
+
+.oneview-page .form input[type="button"]:hover,
+.oneview-page .form button:hover {
+    background: #e67e22;
+}
+
+@media (max-width: 600px) {
+    .oneview-page {
+        padding: 12px 8px;
+    }
+
+    .oneview-page .view,
+    .oneview-page .form {
+        padding: 15px 12px;
+    }
+
+    .oneview-page .One h3 {
+        font-size: 21px;
+    }
+
+    .oneview-page .view li {
+        font-size: 14px;
+    }
+
+    .oneview-page .form input[type="button"],
+    .oneview-page .form button {
+        margin: 4px 0;
+    }
+}

@@ -1,3 +1,4 @@
+import "../../css/AboutUniversity.css"
 function About()
 {
     return(

@@ -1,0 +1,59 @@
+.Footer {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #172554, #243f85);
+}
+
+.Footer .Admission {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.Footer .data {
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.Footer .data:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-3px);
+}
+
+.Footer .data a {
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.6;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.Footer .data a:hover {
+    color: #ffd54f;
+}
+
+@media (max-width: 600px) {
+    .Footer {
+        padding: 14px 10px;
+    }
+
+    .Footer .Admission {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .Footer .data {
+        padding: 10px 12px;
+    }
+
+    .Footer .data a {
+        font-size: 13px;
+    }
+}

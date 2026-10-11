@@ -3,7 +3,7 @@ const Fdata = [
         id: 1,
 
         tital: "Admission Announcements",
-        Link: ""
+        Link: "AdmissionCorner"
     },
     {
         id: 2,

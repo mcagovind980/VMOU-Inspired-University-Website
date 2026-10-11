@@ -1,9 +1,11 @@
 import Fdata from "./Admission.js"
+import "../../css/Admission.css"
 function Footer() {
     return (
 
         <>
-            <div className="Footer">
+            <div className="Footer1">
+
                 <div className="Admission">
                     {Fdata.map((item) =>
 

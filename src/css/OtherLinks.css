@@ -1,25 +1,106 @@
+
 .other {
-    padding: 0px;
-    border: 1px solid black;
-    height: 400px;
     width: 30%;
+    min-width: 0;
+    min-height: 400px;
+    padding: 15px;
+    margin: 0;
+    box-sizing: border-box;
     text-align: center;
-    background-color: aqua;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #00e5ff, #80deea);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.other>.item {
+.other:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 26px rgba(0, 0, 0, 0.25);
+}
+
+.other > .items {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    min-height: 320px;
+    padding: 14px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #fff9c4, #dff485);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.items > .card {
     display: flex;
     align-items: center;
-    text-align: center;
-    flex-direction: column;
-    height: 80%;
-    width: 80%;
-    border: 1px solid black;
-    margin-left: 30px;
+    justify-content: center;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgba(23, 45, 103, 0.2);
+    border-radius: 14px;
+    background: linear-gradient(135deg, #76eea0, #b2f7c5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    overflow-wrap: anywhere;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.item>.card {
-    height: 40px;
-    width: 100%;
-    border: 1px solid;
+.items > .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 769px) {
+    .other {
+        width: 30%;
+    }
+}
+
+@media (max-width: 768px) {
+    .other {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .other > .items {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .other {
+        padding: 10px;
+        border-radius: 18px;
+    }
+
+    .other > .items {
+        padding: 10px;
+        gap: 10px;
+        font-size: 14px;
+        border-radius: 14px;
+    }
+
+    .items > .card {
+        min-height: 44px;
+        padding: 10px 8px;
+        font-size: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .other,
+    .items > .card {
+        transition: none;
+    }
+
+    .other:hover,
+    .items > .card:hover {
+        transform: none;
+    }
 }

@@ -1,3 +1,5 @@
+
+
 .container1 {
     width: 100%;
     background: #172d67;
@@ -13,19 +15,21 @@
     gap: 0;
 }
 
-.navigation>a,
-.dropdown>a {
+/* Main navigation links */
+.navigation > a,
+.dropdown > a {
     display: block;
     padding: 16px 12px;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     font-size: 13px;
     font-weight: 600;
     white-space: nowrap;
 }
 
-.navigation>a:hover,
-.dropdown:hover>a {
+/* Hover effect */
+.navigation > a:hover,
+.dropdown:hover > a {
     background: #f2b705;
     color: #172d67;
 }
@@ -35,16 +39,17 @@
     position: relative;
 }
 
-/* Hidden dropdown */
+/* Dropdown menu hidden by default */
 .menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     min-width: 210px;
-    background: white;
-    box-shadow: 0 5px 15px #00000030;
+    background: rgb(196, 226, 255);
+    box-shadow: 5px 7px 15px #00000030;
     border-radius: 0 0 5px 5px;
+    z-index: 1001;
 }
 
 /* Dropdown links */
@@ -53,7 +58,9 @@
     padding: 12px 15px;
     color: #172d67;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
+    font-weight: 400;
+    text-shadow: none;
 }
 
 .menu a:hover {
@@ -61,31 +68,169 @@
     color: #172d67;
 }
 
-/* Show on hover or keyboard focus */
-.dropdown:hover .menu,
-.dropdown:focus-within .menu {
-    display: block;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .navigation {
-        align-items: stretch;
-        flex-direction: column;
+/* Desktop: hover only */
+@media (min-width: 769px) {
+    .dropdown:hover > .menu {
+        display: block;
     }
 
-    .navigation>a,
-    .dropdown>a {
+    /* Do not keep menu open just because it has focus */
+    .dropdown:focus-within > .menu {
+        display: none;
+    }
+
+    /* Hover takes priority while pointer is over dropdown */
+    .dropdown:hover:focus-within > .menu {
+        display: block;
+    }
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+    .navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navigation > a,
+    .dropdown > a {
         padding: 13px 16px;
+    }
+
+    .dropdown {
+        width: 100%;
     }
 
     .menu {
         position: static;
+        min-width: 0;
+        width: 100%;
         box-shadow: none;
         border-radius: 0;
     }
 
+    /* Mobile hover should not keep dropdown open */
+    .dropdown:hover > .menu {
+        display: none;
+    }
+
+    .dropdown > .menu:hover {
+        display: block;
+    }
+
     .menu a {
         padding-left: 32px;
+    }
+}
+
+
+.container1 .nav-search {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    margin: 10px 12px;
+    z-index: 1002;
+}
+
+.container1 .nav-search form {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    min-height: 44px;
+    overflow: hidden;
+    background: #fff;
+    border: 2px solid #f2b705;
+    border-radius: 9px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.container1 .nav-search input {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #172d67;
+    font-size: 14px;
+}
+
+.container1 .nav-search .search-button {
+    padding: 0 13px;
+    border: none;
+    background: #f2b705;
+    color: #172d67;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.container1 .nav-search .search-button:hover {
+    background: #ffd84d;
+}
+
+.container1 .nav-search .search-clear {
+    padding: 0 9px;
+    border: none;
+    background: #fff;
+    color: #172d67;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.container1 .search-results {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    width: 100%;
+    max-height: 320px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #d5def0;
+    border-radius: 8px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+    z-index: 1003;
+}
+
+.container1 .search-results button {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-bottom: 1px solid #edf0f7;
+    background: #fff;
+    color: #172d67;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+    overflow-wrap: anywhere;
+}
+
+.container1 .search-results button:hover {
+    background: #fff3b0;
+}
+
+.container1 .search-results p {
+    padding: 12px;
+    margin: 0;
+    color: #64748b;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container1 .nav-search {
+        width: auto;
+        max-width: none;
+        margin: 12px;
+    }
+
+    .container1 .nav-search form {
+        min-height: 46px;
+    }
+
+    .container1 .search-results {
+        max-height: 250px;
     }
 }

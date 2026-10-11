@@ -1,10 +1,10 @@
-import School from "./BachelerDegree.js"
+import School from "./MasterDegree.js"
 function Department() {
 
     return (
         <>
             <div className="School">
-                <h1>~ SCHOOL OF COMMERCE & MANAGEMENT ~</h1>
+                <h1>~Master Degree Programme ~</h1>
                 <div className="table">
                     <table>
                         <thead>

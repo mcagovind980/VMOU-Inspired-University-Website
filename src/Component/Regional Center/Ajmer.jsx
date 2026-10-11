@@ -8,7 +8,7 @@ function Ajmer() {
 
                     <img src="/Images/Ajmer/Ajmer.jpg" />
                     </div>
-                    <h1><a href="#">List of Study Centers</a></h1>
+                    <h1><a href="https://online.vmou.ac.in/StudyCentres.aspx?encparam=xbR1TeMKwbj6O5MD0awhAg==">List of Study Centers</a></h1>
                     <p><b>Director :</b>
                      Mr. Balwan Singh Saini (Officiating Incharge)</p>
 

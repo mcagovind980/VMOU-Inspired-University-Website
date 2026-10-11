@@ -6,7 +6,7 @@ function OhterLinks() {
             <div className="other">
                 <h1>~OTHER LINKS~</h1>
 
-                <div className="item">
+                <div className="items">
                     {Other.map((item) =>
                         <div key={item.id} className="card">
                             <a href={item.Link} >{item.title}</a>

@@ -2,27 +2,27 @@ const Other=[
     {
     id:1,
    title:"Click Here for Admission",
-Link:"#"
+Link:"/Online"
 },
     {
     id:2,
-   title:"Public Self Disclosure",
-Link:"#"
+   title:"Programmes",
+Link:"/EducationProgramme"
 },
     {
     id:3,
    title:"Learning Management System",
-Link:"#"
+Link:"/VideoLectures"
 },
     {
     id:4,
-   title:"RAJ BHAWAN",
-Link:"#"
+   title:"UGC e-Samadhan Portal",
+Link:"https://samadhaan.ugc.ac.in/"
 },
     {
     id:5,
    title:"UGC",
-Link:"#"
+Link:"https://www.ugc.gov.in/"
 },
 
 

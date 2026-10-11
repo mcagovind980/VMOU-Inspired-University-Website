@@ -1,4 +1,5 @@
 import admi from "./AdmissionAnnouncement.js"
+import "../../css/AdmissionAnnouncement.css"
 function Ann()
 {
 return(

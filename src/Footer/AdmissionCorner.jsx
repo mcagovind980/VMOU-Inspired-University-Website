@@ -1,4 +1,5 @@
 import Fdata from "./AdmissionCorner.js"
+import "../css/AdmissionCorner.css"
 function Footer() {
     return (
 

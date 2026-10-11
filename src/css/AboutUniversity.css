@@ -1,0 +1,82 @@
+
+.About {
+    width: 100%;
+    padding: 30px 24px;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #eef4ff, #ffffff, #f4f0ff);
+}
+
+.Vmou {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid #dce5f5;
+    border-left: 5px solid #243f85;
+    border-radius: 14px;
+    box-shadow: 0 6px 22px rgba(23, 45, 103, 0.10);
+}
+
+.Vmou p {
+    margin: 0 0 20px;
+    color: #374151;
+    font-size: 16px;
+    line-height: 1.9;
+    text-align: justify;
+    overflow-wrap: anywhere;
+}
+
+.Vmou p:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .About {
+        padding: 24px 18px;
+    }
+
+    .Vmou {
+        padding: 24px;
+    }
+
+    .Vmou p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+}
+
+@media (max-width: 600px) {
+    .About {
+        padding: 14px 10px;
+    }
+
+    .Vmou {
+        padding: 16px;
+        border-left-width: 4px;
+        border-radius: 10px;
+    }
+
+    .Vmou p {
+        margin-bottom: 16px;
+        font-size: 14px;
+        line-height: 1.8;
+        text-align: left;
+    }
+}
+
+@media (max-width: 360px) {
+    .About {
+        padding: 10px 6px;
+    }
+
+    .Vmou {
+        padding: 12px;
+    }
+
+    .Vmou p {
+        font-size: 13px;
+        line-height: 1.75;
+    }
+}
