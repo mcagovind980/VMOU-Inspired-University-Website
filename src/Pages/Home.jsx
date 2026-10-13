@@ -12,7 +12,8 @@ function Home() {
     return (
         <>
 
-
+        <Header />
+         <Navigation/>
             <Pagination />
 
             <div className="Side">
@@ -22,7 +23,8 @@ function Home() {
             </div>
 
             <ServicesCard />
-            
+<Servicecardslid/>
+<Footer/>            
 
 
         </>

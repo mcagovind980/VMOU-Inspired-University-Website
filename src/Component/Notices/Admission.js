@@ -9,7 +9,7 @@ const Fdata=[
         id:2,
     
         tital:"Admission Apply",
-        Link:"Online"
+        Link:"/Online"
     },
     {
         id:3,

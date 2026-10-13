@@ -1,6 +1,6 @@
 
 import "./Header.css"
-
+import {Link} from "react-router-dom"
 function Header() {
 
     return (
@@ -16,6 +16,11 @@ function Header() {
                     <h2>Establish in 1987 Recognized by UGC,& DEB</h2>
                 </div>
                      
+
+            </div>
+            <div className="Login">
+     <Link  id ="l" to="/Login">Login</Link>
+     <Link id ="l1" to="/Register">Register</Link>
 
             </div>
         </>

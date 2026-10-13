@@ -37,6 +37,8 @@ import VideoLectures from "./Online Services/VideoLectures.jsx";
 import ServicesCard from "./Online Services/ServicesCard.jsx";
 import Online from "./Online Services/Online.jsx";
 import Servicecardslid from "./Online Services/Servicecardslid.jsx";
+import Register from "./Pages/Register.jsx";
+import Login from "./Pages/Login.jsx";
 
 
 function Vmou() {
@@ -44,8 +46,6 @@ function Vmou() {
   return (
     <>
       <div className="app-layout">
-        <Header />
-        <Navigation />
 
         <main className="main-content">
           <Routes>
@@ -94,15 +94,19 @@ function Vmou() {
 
             <Route path="/ServicesCard" element={<ServicesCard/>} />
             <Route path="/Online" element={<Online/>} />
-            {/* <Route path="/Servicecardslid" element={<Servicecardslid/>} /> */}
+
+
+            <Route path="/Login" element={<Login/>} />
+            <Route path="/Register" element={<Register/>} />
+            <Route path="/Navigation" element={<Navigation/>} />
+            <Route path="/Servicecardslid" element={<Servicecardslid/>} />
 
 
 
           </Routes>
         </main>
 
-<Servicecardslid/>
-        <Footer />
+
       </div>
 
     </>

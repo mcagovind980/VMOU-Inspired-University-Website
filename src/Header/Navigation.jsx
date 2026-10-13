@@ -9,16 +9,14 @@ function Navigation() {
     const [openMenu, setOpenMenu] = useState("");
     const navigate = useNavigate();
 
-    const allItems = [
-        ...pages,
-        ...Announcement.map((item) => ({
+    const allItems = [...pages,...Announcement.map((item) => ({
             title: item.title,
             path: item.Link,
         })),
     ];
 
     const results = search.trim()
-        ? allItems
+               ? allItems
               .filter((item) =>
                   item.title
                       ?.toLowerCase()
@@ -267,6 +265,7 @@ function Navigation() {
 
                 {/* SEARCH */}
                 <div className="nav-search">
+
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();
@@ -318,6 +317,14 @@ function Navigation() {
                         </div>
                     )}
                 </div>
+                 
+
+
+
+              
+
+                     
+
             </nav>
         </div>
     );

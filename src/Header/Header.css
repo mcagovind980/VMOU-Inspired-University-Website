@@ -58,6 +58,26 @@
     line-height: 1.35;
 }
 
+#l1{
+  position: absolute;
+  top: 120px;
+right: 30px;
+font-size: 20px;
+font-weight: 800;
+
+}
+#l #l1 :hover{
+    color: #172d67;
+}
+
+#l{
+   position: absolute;
+  top: 100px;
+right: 30px;
+font-size: 20px;
+font-weight: 800;
+}
+
 .Header h2 {
     margin: 4px 0;
     color: #c62828;
